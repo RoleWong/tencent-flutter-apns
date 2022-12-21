@@ -1,3 +1,9 @@
+# About this fork
+
+This package is forked from [flutter_apns](https://pub.dev/packages/flutter_apns) and maintained by [Tencent Cloud Chat](https://www.tencentcloud.com/products/im?from=pub).
+
+Mainly upgraded the Firebase SDK to latest version.
+
 # apns
 
 Plugin to implement APNS push notifications on iOS and Firebase on Android.
@@ -26,10 +32,10 @@ if #available(iOS 10.0, *) {
 }
 ```
 
-4. Add `flutter_apns` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
+4. Add `tencent_flutter_apns` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 5. Using `createPushConnector()` method, configure push service according to your needs. `PushConnector` closely resembles `FirebaseMessaging`, so Firebase samples may be useful during implementation. You should create the connector as soon as possible to get the onLaunch callback working on closed app launch.
 ```dart
-import 'package:flutter_apns/apns.dart';
+import 'package:tencent_flutter_apns/apns.dart';
 
 final connector = createPushConnector();
 connector.configure(
@@ -100,7 +106,7 @@ Check the example project for fully working code.
 If you want to use firebase, but not firebase messaging, add this configuration entry in your Info.plist (to avoid MissingPluginException):
 
 ```
-<key>flutter_apns.disable_firebase_core</key>
+<key>tencent_flutter_apns.disable_firebase_core</key>
 <false/>
 ```
 
@@ -108,7 +114,7 @@ If you want to use firebase, but not firebase messaging, add this configuration 
 If only care about apns - use flutter_apns_only plugin. It does not depend on firebase. To ensure no swizzling (which is needed by original plugin to disable firebase) takes place, add this configuration entry in your Info.plist:
 
 ```plist
-<key>flutter_apns.disable_swizzling</key>
+<key>tencent_flutter_apns.disable_swizzling</key>
 <true/>
 ```
 

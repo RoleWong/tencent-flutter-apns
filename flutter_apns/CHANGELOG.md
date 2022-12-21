@@ -1,3 +1,6 @@
+### 2.0.0
+* Upgrade Firebase SDK to latest version.
+
 ### 1.6.0
 * (#97) updated dependencies
 * enhanced example app
@@ -13,7 +16,7 @@
 * (#43) Fix onLaunch not working with closed app
 * (#41) Add authorization status for iOS
 * (#48) Upgrade to null safety
-* (#48) separate flutter_apns and flutter_apns_only
+* (#48) separate tencent_flutter_apns and flutter_apns_only
 
 ### 1.4.1
 * (#31) fix duplicated onLaunch onResume
